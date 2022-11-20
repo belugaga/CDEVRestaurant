@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+<head>
+    <title>Yummylicious Home Page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+
+    <script>
+        var username1, token;
+        token = sessionStorage.getItem("token");
+    </script>
+
+</head>
+
+<body onload="getRestaurantData()">
+    
+    <div w3-include-html="top-navigation.html"></div>
+    
+    <div class="container">
+        
+        <div class="row" id="parent">
+            Retrieving restaurants from database... Please wait...<br><br>
+            If you are seeing this message for a long time, it is likely
+            that you have a JavaScript error. Troubleshoot your script by
+            using the browser console panel now. Please use either Firefox
+            or Chrome to render this webpage.
+        </div>
+        <p>
+            
+        <h3 id="summary"></h3>
+        </p>
+        
+        <div id="restaurantTable" class="row"></div>
+        <br>
+        <h3> And more to come soon...</h3>
+    </div>
+
+    
+    <div w3-include-html="restaurant-modal.html"></div>
+    
+    <div w3-include-html="comment-modal.html"></div>
+    
+    <div w3-include-html="new-comment-modal.html"></div>
+    
+    <div w3-include-html="edit-comment-modal.html"></div>
+    
+    <div w3-include-html="message-modal.html"></div>
+    <div w3-include-html="register-modal.html"></div>
+    <div w3-include-html="success-modal.html"></div>
+    <div w3-include-html="fail-modal.html"></div>
+    <div w3-include-html="login-modal.html"></div>
+    <div w3-include-html="error-modal.html"></div>
+    
+    
+    <br><br>
+    <!-- Include the footer here -->
+    <div w3-include-html="footer.html"></div>
+</body>
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    //to bring in other HTML on the fly into this page
+    w3.includeHTML();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/86ec7c1143.js"></script>
+<script src="js/app.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/restaurant.js"></script>
+<script src="js/register.js"></script>
+<script src="js/login.js"></script>
+<script src="js/checkToken.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/feedback.js"></script>
+<script src="js/loadUsername.js"></script>
+<script src="js/loadProfile.js"></script>
+
+
+</html>
